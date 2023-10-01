@@ -41,26 +41,26 @@ public class BankAccount {
     }
 
     public double deposit(double amt) {
-        amount = amount + amt;
+        setAmount(getAmount()+amt);
         System.out.println(amt + " deposited");
-        return amount;
+        return getAmount();
     }
 
     public double withdraw(double amt) {
-        if (amount < amt) {
+        if (getAmount() < amt) {
             System.out.println("Insufficient Balance");
         } else {
-            amount = amount - amt;
+            setAmount(getAmount()-amt);
             System.out.println(amt + " withdrawn");
         }
-        return amount;
+        return getAmount();
     }
 
-    public void checkBalance() {
-        System.out.println("Balance is: " + amount);
+    public String checkBalance() {
+        return "Balance is: " + getAmount();
     }
 
-    public void display() {
-        System.out.println(accNo + " " + name + " " + amount);
+    public String display() {
+        return getAccNo() + " " + getName() + " " + getAmount();
     }
 }

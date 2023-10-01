@@ -19,6 +19,17 @@ public class BankAccountTest {
 
     @Test
     public void withdrawTestMoreAmount(){
-        Assert.assertEquals(bankAccount.withdraw(2500),7500);
+        Assert.assertEquals(bankAccount.withdraw(25000),10000);
     }
+
+    @Test
+    public void checkBalanceTest(){
+        Assert.assertEquals(bankAccount.checkBalance(), "Balance is: 10000.0");
+    }
+    @Test
+    public void displayTest(){
+        Assert.assertEquals(bankAccount.display(), "10011103 Jonathantho 20000.0");
+    }
+
+
 }
