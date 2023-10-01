@@ -30,6 +30,4 @@ public class BankAccountTest {
     public void displayTest(){
         Assert.assertEquals(bankAccount.display(), "10011103 Jonathantho 20000.0");
     }
-
-
 }
